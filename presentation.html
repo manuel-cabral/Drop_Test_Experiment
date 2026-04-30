@@ -144,7 +144,7 @@
   <p class="date">April 30, 2026</p>
 </section>
 <section id="drop-test-setup" class="slide level2">
-<h2>1. Drop test: Setup</h2>
+<h2>Drop test: Setup</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="imgs/drop_test.png" style="width:72.5%"></p>
@@ -153,7 +153,7 @@
 </div></div>
 </section>
 <section id="drop-test-setup-1" class="slide level2">
-<h2>1. Drop test: Setup</h2>
+<h2>Drop test: Setup</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="imgs/drop_test.png" style="width:72.5%"></p>
@@ -162,7 +162,7 @@
 </div></div>
 </section>
 <section id="drop-test-drop-time" class="slide level2">
-<h2>1. Drop test: Drop time</h2>
+<h2>Drop test: Drop time</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="imgs/drop_test.png" style="width:72.5%"></p>
@@ -172,8 +172,63 @@
 </ol>
 </div></div>
 </section>
+<section id="drop-test-terminal-velocity" class="slide level2">
+<h2>Drop test: Terminal velocity</h2>
+<div style="display: flex; height: 78%; align-items: stretch; gap: 0; font-size: 85%; margin-top: 1em;">
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; padding: 0 2em 0 0.5em;">
+<p>
+At terminal velocity:
+</p>
+<p><span class="math display">\[mg - \rho_w Vg - F_D = 0\]</span></p>
+<p>
+With quadratic drag:
+</p>
+<p><span class="math display">\[F_D = \tfrac{1}{2}\rho_w C_D A v^2\]</span></p>
+<p><span class="math display">\[\therefore \quad v_t = \sqrt{\dfrac{2(mg - \rho_w Vg)}{\rho_w C_D A}}\]</span></p>
+</div>
+<div style="width: 1.5px; background: #ccc; flex-shrink: 0;">
+
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; padding: 0 0.5em 0 2em;">
+<p>
+Define the mass excess:
+</p>
+<p><span class="math display">\[\Delta m = m - \rho_w V\]</span></p>
+<p>
+Substituting into <span class="math inline">\(v_t\)</span>:
+</p>
+<p><span class="math display">\[\boxed{v_t = \sqrt{\dfrac{2\Delta m\, g}{\rho_w C_D A}}}\]</span></p>
+</div>
+</div>
+</section>
+<section id="drop-test-measuring-c_d" class="slide level2">
+<h2>Drop test: Measuring <span class="math inline">\(C_D\)</span></h2>
+<div style="display: flex; flex-direction: column; justify-content: space-evenly; height: 78%; font-size: 85%; margin-top: 0.5em; padding: 0 3em;">
+<p>
+Holding <span class="math inline">\(\Delta m\)</span>, <span class="math inline">\(g\)</span>, <span class="math inline">\(\rho_w\)</span>, and <span class="math inline">\(A\)</span> constant:
+</p>
+<p><span class="math display">\[v_t = \dfrac{K}{\sqrt{C_D}}, \qquad K = \sqrt{\dfrac{2\,\Delta m\, g}{\rho_w\, A}}\]</span></p>
+<p>
+With <span class="math inline">\(\Delta m = 1.8\ \text{g}\)</span>, <span class="math inline">\(A = \pi(2.5)^2 \approx 19.6\ \text{cm}^2\)</span>, <span class="math inline">\(g = 980.7\ \text{cm/s}^2\)</span>, <span class="math inline">\(\rho_w = 1.0\ \text{g/cm}^3\)</span>:
+</p>
+<p><span class="math display">\[\boxed{K = \sqrt{\dfrac{2 \times 1.8 \times 980.7}{1.0 \times 19.6}} \approx 13.4\ \text{cm/s}}\]</span></p>
+</div>
+</section>
+<section id="drop-test-fall-time-c_d" class="slide level2">
+<h2>Drop test: Fall time &amp; <span class="math inline">\(C_D\)</span></h2>
+<div style="display: flex; flex-direction: column; justify-content: space-evenly; height: 82%; font-size: 80%; margin-top: 0; padding: 0 3em;">
+<p>
+At terminal velocity, the fall time over height <span class="math inline">\(H\)</span> is:
+</p>
+<p><span class="math display">\[T = \frac{H}{v_t} = \frac{H\sqrt{C_D}}{K}\]</span></p>
+<p>
+Solving for <span class="math inline">\(C_D\)</span> gives <span class="math inline">\(C_D = \left(\dfrac{KT}{H}\right)^2\)</span>. With <span class="math inline">\(H = 55.0\ \text{cm}\)</span>, <span class="math inline">\(K \approx 13.4\ \text{cm/s}\)</span>:
+</p>
+<p><span class="math display">\[\boxed{C_D = \left(\frac{K}{H}\right)^2 T^2 \approx 0.0594\, T^2}\]</span></p>
+</div>
+</section>
 <section id="drop-test-experiment" class="slide level2">
-<h2>1. Drop test: Experiment</h2>
+<h2>Drop test: Experiment</h2>
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
 <div style="font-size: 200%; text-align: center;">
 <pre><code>Let's try it!</code></pre>
@@ -181,50 +236,30 @@
 </div>
 </section>
 <section id="drop-test-experiment-results" class="slide level2">
-<h2>1. Drop test: Experiment Results</h2>
+<h2>Drop test: Experiment Results</h2>
 <p><span class="math display">\[
 \begin{aligned}
-T_{sphere} &amp;= \qquad\quad &amp;C_d = \qquad\qquad C_{d,theo} &amp;= 0.45 \\\\
+T_{sphere} &amp;= \qquad\quad &amp;C_d = \qquad\qquad C_{d,theo} &amp;= 0.47 \\\\
 T_{ellipsoid} &amp;= \qquad\quad &amp;C_d = \qquad\qquad C_{d,theo} &amp;= 0.30 \\\\
-T_{bullet} &amp;= \qquad\quad &amp;C_d = \qquad\qquad C_{d,theo} &amp;= 0.65\\\\
-T_{NACA} &amp;= \qquad\quad &amp;C_d = \qquad\qquad C_{d,theo} &amp;= 0.15
+T_{bullet} &amp;= \qquad\quad &amp;C_d = \qquad\qquad C_{d,theo} &amp;= 0.33\\\\
+T_{NACA} &amp;= \qquad\quad &amp;C_d = \qquad\qquad C_{d,theo} &amp;= 0.11
 \end{aligned}
 \]</span></p>
 </section>
 <section id="drop-test-analysis" class="slide level2">
-<h2>1. Drop test: Analysis</h2>
-<p><video data-src="videos/tracker_bullet.webm" style="width:100.0%" controls=""><a href="videos/tracker_bullet.webm">Video</a></video></p>
-</section>
-<section id="drop-test-experiment-results-1" class="slide level2">
-<h2>1. Drop test: Experiment Results</h2>
-<p><span class="math display">\[
-\begin{aligned}
-T_{sphere} &amp;= 3.63s \qquad &amp;C_d = 0.78 \quad\qquad C_{d,theo} &amp;= 0.45 \\\\
-T_{ellipsoid} &amp;= 2.82s \quad &amp;C_d = 0.47 \quad\qquad C_{d,theo} &amp;= 0.30 \\\\
-T_{bullet} &amp;= 3.08s \qquad &amp;C_d = 0.56 \quad\qquad C_{d,theo} &amp;= 0.65\\\\
-T_{NACA} &amp;= 1.95s \qquad &amp;C_d = 0.23 \quad\qquad C_{d,theo} &amp;= 0.15
-\end{aligned}
-\]</span></p>
+<h2>Drop test: Analysis</h2>
+<p><video data-src="videos/tracker_sphere.webm" style="width:100.0%" controls=""><a href="videos/tracker_sphere.webm">Video</a></video></p>
 </section>
 <section id="drop-test-analysis-1" class="slide level2">
-<h2>1. Drop test: Analysis</h2>
-<div class="columns">
-<div class="column" style="width:27%;">
-<p><video data-src="videos/exp_sphere.mp4" style="width:100.0%" controls=""><a href="videos/exp_sphere.mp4">Video</a></video></p>
-</div><div class="column" style="width:73%;">
-<p><img data-src="imgs/tracker_sphere.png" style="width:100.0%"></p>
-</div></div>
-</section>
-<section id="drop-test-coefficient-of-drag" class="slide level2">
-<h2>1. Drop test: Coefficient of drag</h2>
+<h2>Drop test: Analysis</h2>
 
-<img data-src="imgs/shapes_ordered_cd.png" width="50" class="r-stretch"></section>
-<section id="drop-test-coefficient-of-drag-1" class="slide level2">
-<h2>1. Drop test: Coefficient of drag</h2>
+<img data-src="imgs/sphere_parabola.png" style="width:100.0%" class="r-stretch"></section>
+<section id="drop-test-analysis-2" class="slide level2">
+<h2>Drop test: Analysis</h2>
 
-<img data-src="imgs/shapes_sph_elli.png" width="50" class="r-stretch"></section>
+<img data-src="imgs/predicted_vs_experimental_vt.png" style="width:100.0%" class="r-stretch"></section>
 <section id="drop-test-numerical-simulation" class="slide level2">
-<h2>1. Drop test: Numerical Simulation</h2>
+<h2>Drop test: Numerical Simulation</h2>
 <div style="display: flex; 
             align-items: center; 
             justify-content: center; /* <-- Changed to 'center' for minimum horizontal gap */
@@ -244,12 +279,8 @@ T_{NACA} &amp;= 1.95s \qquad &amp;C_d = 0.23 \quad\qquad C_{d,theo} &amp;= 0.15
 <p><img src="imgs/tzy_git.png" style="width: 500px; height: auto;"></p>
 </div>
 </section>
-<section id="drop-test-coefficient-of-drag-2" class="slide level2">
-<h2>1. Drop test: Coefficient of drag</h2>
-
-<img data-src="imgs/shapes_sph_bul.png" width="50" class="r-stretch"></section>
 <section id="drop-test-numerical-simulation-1" class="slide level2">
-<h2>1. Drop test: Numerical Simulation</h2>
+<h2>Drop test: Numerical Simulation</h2>
 <div style="display: flex; 
             align-items: center; 
             justify-content: center; /* <-- Changed to 'center' for minimum horizontal gap */
@@ -269,12 +300,8 @@ T_{NACA} &amp;= 1.95s \qquad &amp;C_d = 0.23 \quad\qquad C_{d,theo} &amp;= 0.15
 <p><img src="imgs/tzy_git.png" style="width: 500px; height: auto;"></p>
 </div>
 </section>
-<section id="drop-test-coefficient-of-drag-3" class="slide level2">
-<h2>1. Drop test: Coefficient of drag</h2>
-
-<img data-src="imgs/shapes_sph_naca.png" width="50" class="r-stretch"></section>
 <section id="drop-test-numerical-simulation-2" class="slide level2">
-<h2>1. Drop test: Numerical Simulation</h2>
+<h2>Drop test: Numerical Simulation</h2>
 <div style="display: flex; 
             align-items: center; 
             justify-content: center; /* <-- Changed to 'center' for minimum horizontal gap */

@@ -24,7 +24,7 @@ format:
     css: styles.css
 ---
 
-## 1. Drop test: Setup
+## Drop test: Setup
 
 ::: columns
 
@@ -40,7 +40,7 @@ format:
 
 :::
 
-## 1. Drop test: Setup
+## Drop test: Setup
 
 ::: columns
 
@@ -54,7 +54,7 @@ format:
 
 :::
 
-## 1. Drop test: Drop time
+## Drop test: Drop time
 
 ::: columns
 
@@ -68,7 +68,70 @@ a. What is the object's terminal velocity?
 
 :::
 
-## 1. Drop test: Experiment
+## Drop test: Terminal velocity
+
+<div style="display: flex; height: 78%; align-items: stretch; gap: 0; font-size: 85%; margin-top: 1em;">
+
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; padding: 0 2em 0 0.5em;">
+
+<p>At terminal velocity:</p>
+
+$$mg - \rho_w Vg - F_D = 0$$
+
+<p>With quadratic drag:</p>
+
+$$F_D = \tfrac{1}{2}\rho_w C_D A v^2$$
+
+$$\therefore \quad v_t = \sqrt{\dfrac{2(mg - \rho_w Vg)}{\rho_w C_D A}}$$
+
+</div>
+
+<div style="width: 1.5px; background: #ccc; flex-shrink: 0;"></div>
+
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; padding: 0 0.5em 0 2em;">
+
+<p>Define the mass excess:</p>
+
+$$\Delta m = m - \rho_w V$$
+
+<p>Substituting into $v_t$:</p>
+
+$$\boxed{v_t = \sqrt{\dfrac{2\Delta m\, g}{\rho_w C_D A}}}$$
+
+</div>
+
+</div>
+
+
+## Drop test: Measuring $C_D$
+
+<div style="display: flex; flex-direction: column; justify-content: space-evenly; height: 78%; font-size: 85%; margin-top: 0.5em; padding: 0 3em;">
+
+<p>Holding $\Delta m$, $g$, $\rho_w$, and $A$ constant:</p>
+
+$$v_t = \dfrac{K}{\sqrt{C_D}}, \qquad K = \sqrt{\dfrac{2\,\Delta m\, g}{\rho_w\, A}}$$
+
+<p>With $\Delta m = 1.8\ \text{g}$, $A = \pi(2.5)^2 \approx 19.6\ \text{cm}^2$, $g = 980.7\ \text{cm/s}^2$, $\rho_w = 1.0\ \text{g/cm}^3$:</p>
+
+$$\boxed{K = \sqrt{\dfrac{2 \times 1.8 \times 980.7}{1.0 \times 19.6}} \approx 13.4\ \text{cm/s}}$$
+
+</div>
+
+## Drop test: Fall time & $C_D$
+
+<div style="display: flex; flex-direction: column; justify-content: space-evenly; height: 82%; font-size: 80%; margin-top: 0; padding: 0 3em;">
+
+<p>At terminal velocity, the fall time over height $H$ is:</p>
+
+$$T = \frac{H}{v_t} = \frac{H\sqrt{C_D}}{K}$$
+
+<p>Solving for $C_D$ gives $C_D = \left(\dfrac{KT}{H}\right)^2$. With $H = 55.0\ \text{cm}$, $K \approx 13.4\ \text{cm/s}$:</p>
+
+$$\boxed{C_D = \left(\frac{K}{H}\right)^2 T^2 \approx 0.0594\, T^2}$$
+
+</div>
+
+## Drop test: Experiment
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
   <div style="font-size: 200%; text-align: center;">
@@ -76,56 +139,32 @@ a. What is the object's terminal velocity?
   </div>
 </div>
 
-## 1. Drop test: Experiment Results
+## Drop test: Experiment Results
 
 $$
 \begin{aligned}
-T_{sphere} &= \qquad\quad &C_d = \qquad\qquad C_{d,theo} &= 0.45 \\\\
+T_{sphere} &= \qquad\quad &C_d = \qquad\qquad C_{d,theo} &= 0.47 \\\\
 T_{ellipsoid} &= \qquad\quad &C_d = \qquad\qquad C_{d,theo} &= 0.30 \\\\
-T_{bullet} &= \qquad\quad &C_d = \qquad\qquad C_{d,theo} &= 0.65\\\\
-T_{NACA} &= \qquad\quad &C_d = \qquad\qquad C_{d,theo} &= 0.15
+T_{bullet} &= \qquad\quad &C_d = \qquad\qquad C_{d,theo} &= 0.33\\\\
+T_{NACA} &= \qquad\quad &C_d = \qquad\qquad C_{d,theo} &= 0.11
 \end{aligned}
 $$
 
-## 1. Drop test: Analysis
+## Drop test: Analysis
 
-![](videos/tracker_bullet.webm){width=100%}
-
-## 1. Drop test: Experiment Results
-
-$$
-\begin{aligned}
-T_{sphere} &= 3.63s \qquad &C_d = 0.78 \quad\qquad C_{d,theo} &= 0.45 \\\\
-T_{ellipsoid} &= 2.82s \quad &C_d = 0.47 \quad\qquad C_{d,theo} &= 0.30 \\\\
-T_{bullet} &= 3.08s \qquad &C_d = 0.56 \quad\qquad C_{d,theo} &= 0.65\\\\
-T_{NACA} &= 1.95s \qquad &C_d = 0.23 \quad\qquad C_{d,theo} &= 0.15
-\end{aligned}
-$$
+![](videos/tracker_sphere.webm){width=100%}
 
 
-## 1. Drop test: Analysis
-::: columns
+## Drop test: Analysis
 
-::: {.column width="27%"}
-![](videos/exp_sphere.mp4){width=100%}
-:::
+![](imgs/sphere_parabola.png){width=100%}
 
-::: {.column width="73%"}
-![](imgs/tracker_sphere.png){width=100%}
-:::
+## Drop test: Analysis
 
-:::
+![](imgs/predicted_vs_experimental_vt.png){width=100%}
 
 
-## 1. Drop test: Coefficient of drag
-
-![](imgs/shapes_ordered_cd.png){width=50px}
-
-## 1. Drop test: Coefficient of drag
-
-![](imgs/shapes_sph_elli.png){width=50px}
-
-## 1. Drop test: Numerical Simulation
+## Drop test: Numerical Simulation
 
 
 <div style="display: flex; 
@@ -156,11 +195,7 @@ $$
   
 </div>
 
-## 1. Drop test: Coefficient of drag
-
-![](imgs/shapes_sph_bul.png){width=50px}
-
-## 1. Drop test: Numerical Simulation
+## Drop test: Numerical Simulation
 
 
 <div style="display: flex; 
@@ -191,11 +226,8 @@ $$
   
 </div>
 
-## 1. Drop test: Coefficient of drag
 
-![](imgs/shapes_sph_naca.png){width=50px}
-
-## 1. Drop test: Numerical Simulation
+## Drop test: Numerical Simulation
 
 
 <div style="display: flex; 
