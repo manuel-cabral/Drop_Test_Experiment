@@ -1,11 +1,10 @@
 ---
-title: "Ch. 5 Tutorial:"
-subtitle: "on Boundary Layers"
+title: "Drop test Experiment"
 date: today
 date-format: long
 author: 
   - name: |
-      TA: Manuel Cabral <br> Lecturer: Gabriel D. Weymouth
+      Manuel Cabral <br> Lecturer: Gabriel D. Weymouth
 title-slide-attributes:
   data-background-color: "#00ADEF"
   # Set the white logo as a background image for the title slide
@@ -226,60 +225,6 @@ $$
   <img src="imgs/tzy_git.png" style="width: 500px; height: auto;">
   
 </div>
-
-## 2. Internal flow
-
-## 2. Fish Ladder
-
-![](imgs/fish_ladder.png){width=100%}
-
-## 2. Fish Ladder
-
-<!-- ![](imgs/fish_ladder.png){width=70%} -->
-
-a. Identify the key nondimensional parameter(s) that govern the flow. Explain why the *hydraulic diameter* is the relevant length scale for defining the Reynolds number in this problem.
-
-::: {.callout-note}
-The **hydraulic diameter**, $D_H$, is a metric that relates circular tubes with non-round tubes, and it is defined as:
-
-$$
- D_H = \frac{4 \times \text{area of cross-section}}{\text{wetted perimeter of the cross-section}} = \frac{4hw}{2(h+w)}
-$$
-:::
-
-## 2. Fish Ladder
-
-![](imgs/fish_ladder_w_units.png){width=25%}
-
-b. Compute the Reynolds number for this system, and determine whether the flow is laminar or turbulent.
-
-## 2. Fish Ladder
-
-![](imgs/fish_ladder.png){width=70%}
-
-c. Calculate the maximum angle $\alpha$ such that the fish are still able to move past the dam.
-
-::: {.callout-tip}
-You will need an equation relating the pressure loss due to viscous shear forces along the pipe with the velocity of the fluid. Use the Darcy–Weisbach equation: $\frac{\Delta P}{L} = \frac{f}{D_h}\,\frac{\rho U^2}{2}$
-:::
-
-::: {.callout-tip}
-You will need to relate the Reynolds number with the friction factor $f$. Use a Moody diagram.
-:::
-
-## Fish Ladder: Moody diagram
-
-![](imgs/moody_diagram.png){width=100%}
-
-
-
-## Fish Ladder: Moody diagram
-
-![](imgs/moody_diagram.png){width=100%}
-
-::: {.callout-caution}
-The use of such diagram is typically an iterative process.
-:::
 
 
 ## Thank you!
