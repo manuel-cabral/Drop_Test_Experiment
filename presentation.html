@@ -9,9 +9,9 @@
 <link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.32">
 
-  <meta name="author" content="TA: Manuel Cabral   Lecturer: Gabriel D. Weymouth">
-  <meta name="dcterms.date" content="2025-10-03">
-  <title>Ch. 5 Tutorial:</title>
+  <meta name="author" content="Manuel Cabral   Lecturer: Gabriel D. Weymouth">
+  <meta name="dcterms.date" content="2026-04-30">
+  <title>Drop test Experiment</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -131,18 +131,17 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#00ADEF" data-background-image="imgs/TUDelft_logo_white.png" data-background-position="bottom 10px right 30px" data-background-size="170px" class="quarto-title-block center">
-  <h1 class="title">Ch. 5 Tutorial:</h1>
-  <p class="subtitle">on Boundary Layers</p>
+  <h1 class="title">Drop test Experiment</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<p>TA: Manuel Cabral <br> Lecturer: Gabriel D. Weymouth</p> 
+<p>Manuel Cabral <br> Lecturer: Gabriel D. Weymouth</p> 
 </div>
 </div>
 </div>
 
-  <p class="date">October 3, 2025</p>
+  <p class="date">April 30, 2026</p>
 </section>
 <section id="drop-test-setup" class="slide level2">
 <h2>1. Drop test: Setup</h2>
@@ -295,102 +294,11 @@ T_{NACA} &amp;= 1.95s \qquad &amp;C_d = 0.23 \quad\qquad C_{d,theo} &amp;= 0.15
 <p><img src="imgs/tzy_git.png" style="width: 500px; height: auto;"></p>
 </div>
 </section>
-<section id="internal-flow" class="slide level2">
-<h2>2. Internal flow</h2>
-</section>
-<section id="fish-ladder" class="slide level2">
-<h2>2. Fish Ladder</h2>
-
-<img data-src="imgs/fish_ladder.png" style="width:100.0%" class="r-stretch"></section>
-<section id="fish-ladder-1" class="slide level2">
-<h2>2. Fish Ladder</h2>
-<!-- ![](imgs/fish_ladder.png){width=70%} -->
-<ol type="a">
-<li>Identify the key nondimensional parameter(s) that govern the flow. Explain why the <em>hydraulic diameter</em> is the relevant length scale for defining the Reynolds number in this problem.</li>
-</ol>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>The <strong>hydraulic diameter</strong>, <span class="math inline">\(D_H\)</span>, is a metric that relates circular tubes with non-round tubes, and it is defined as:</p>
-<p><span class="math display">\[
-D_H = \frac{4 \times \text{area of cross-section}}{\text{wetted perimeter of the cross-section}} = \frac{4hw}{2(h+w)}
-\]</span></p>
-</div>
-</div>
-</div>
-</section>
-<section id="fish-ladder-2" class="slide level2">
-<h2>2. Fish Ladder</h2>
-
-<img data-src="imgs/fish_ladder_w_units.png" style="width:25.0%" class="r-stretch"><ol start="2" type="a">
-<li>Compute the Reynolds number for this system, and determine whether the flow is laminar or turbulent.</li>
-</ol>
-</section>
-<section id="fish-ladder-3" class="slide level2">
-<h2>2. Fish Ladder</h2>
-
-<img data-src="imgs/fish_ladder.png" style="width:70.0%" class="r-stretch"><ol start="3" type="a">
-<li>Calculate the maximum angle <span class="math inline">\(\alpha\)</span> such that the fish are still able to move past the dam.</li>
-</ol>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>You will need an equation relating the pressure loss due to viscous shear forces along the pipe with the velocity of the fluid. Use the Darcy–Weisbach equation: <span class="math inline">\(\frac{\Delta P}{L} = \frac{f}{D_h}\,\frac{\rho U^2}{2}\)</span></p>
-</div>
-</div>
-</div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>You will need to relate the Reynolds number with the friction factor <span class="math inline">\(f\)</span>. Use a Moody diagram.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="fish-ladder-moody-diagram" class="slide level2">
-<h2>Fish Ladder: Moody diagram</h2>
-
-<img data-src="imgs/moody_diagram.png" style="width:100.0%" class="r-stretch"></section>
-<section id="fish-ladder-moody-diagram-1" class="slide level2">
-<h2>Fish Ladder: Moody diagram</h2>
-
-<img data-src="imgs/moody_diagram.png" style="width:100.0%" class="r-stretch"><div class="callout callout-caution callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Caution</strong></p>
-</div>
-<div class="callout-content">
-<p>The use of such diagram is typically an iterative process.</p>
-</div>
-</div>
-</div>
-</section>
 <section id="thank-you" class="slide level2">
 <h2>Thank you!</h2>
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
 <div style="font-size: 150%; text-align: center;">
-<pre><code>For any question, feel free to reach me at  m.m.cabral@tudelft.nl, or at my office, 34 B-2-320.</code></pre>
+<pre><code>For any question, feel free to reach me at  mcabral@tudelft.nl, or at my office, 34 B-2-320.</code></pre>
 </div>
 </div>
 
